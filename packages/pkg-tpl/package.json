@@ -1,0 +1,101 @@
+{
+  "name": "unplugin-oss-uploader",
+  "type": "module",
+  "version": "0.0.0-alpha.0",
+  "private": true,
+  "description": "Upload assets to OSS with Vite or Webpack",
+  "author": "penjj<peng.j.1995@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/penjj/unplugin-oss-uploader",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/penjj/unplugin-oss-uploader.git",
+    "directory": "packages/unplugin-oss-uploader"
+  },
+  "bugs": {
+    "url": "https://github.com/penjj/unplugin-oss-uploader/issues"
+  },
+  "keywords": [
+    "vite",
+    "webpack",
+    "oss",
+    "qiniu",
+    "taro",
+    "wechat miniprogram",
+    "tencent",
+    "oss",
+    "cdn",
+    "unplugin"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    },
+    "./vite": {
+      "types": "./dist/vite.d.ts",
+      "import": "./dist/vite.mjs",
+      "require": "./dist/vite.cjs"
+    },
+    "./webpack": {
+      "types": "./dist/webpack.d.ts",
+      "import": "./dist/webpack.mjs",
+      "require": "./dist/webpack.cjs"
+    },
+    "./adapter": {
+      "types": "./dist/adapter.d.ts",
+      "import": "./dist/adapter.mjs",
+      "require": "./dist/adapter.cjs"
+    },
+    "./assets-loader": {
+      "types": "./dist/assetsLoader.d.ts",
+      "import": "./dist/assetsLoader.mjs",
+      "require": "./dist/assetsLoader.cjs"
+    }
+  },
+  "typesVersions": {
+    "*": {
+      "*": [
+        "dist/*"
+      ]
+    }
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "unbuild",
+    "prepare": "pnpm stub",
+    "stub": "unbuild --stub"
+  },
+  "peerDependencies": {
+    "cos-nodejs-sdk-v5": ">=2",
+    "postcss": "*",
+    "qiniu": ">=7"
+  },
+  "peerDependenciesMeta": {
+    "cos-nodejs-sdk-v5": {
+      "optional": true
+    },
+    "postcss": {
+      "optional": true
+    },
+    "qiniu": {
+      "optional": true
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "cos-nodejs-sdk-v5": "^2.12.6",
+    "postcss": "^8.4.33",
+    "qiniu": "^7.11.0",
+    "unplugin": "^1.6.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.5",
+    "unbuild": "^2.0.0"
+  }
+}
